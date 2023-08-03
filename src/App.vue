@@ -1,23 +1,28 @@
+<!-- @format -->
+
 <template>
-  <v-app>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+	<v-app>
+		<v-main>
+			<NavBar />
+			<HelloWorld />
+		</v-main>
+	</v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
-  name: 'App',
+	name: "App",
 
-  components: {
-    HelloWorld,
-  },
+	components: {
+		NavBar,
+		HelloWorld,
+	},
 
-  data: () => ({
-    //
-  }),
-}
+	data: () => ({
+		//
+	}),
+};
 </script>
