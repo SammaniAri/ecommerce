@@ -11,13 +11,13 @@
 			>
 
 			<v-btn variant="plain">
-				Home
+				<a href="#home">Home</a>
 			</v-btn>
 			<v-btn variant="plain">
 				About
 			</v-btn>
 			<v-btn variant="plain">
-				Products
+				<a href="#products">Products</a>
 			</v-btn>
 			<v-btn variant="plain">
 				Feedback
@@ -25,10 +25,17 @@
 			<v-btn
 				variant="plain"
 				class="pr-15">
-				Get in Touch
+				<a href="#contact"
+					>Get In Touch</a
+				>
 			</v-btn>
 		</v-app-bar>
 	</v-container>
 </template>
 <script></script>
-<style></style>
+<style>
+a {
+	text-decoration: none;
+	color: black;
+}
+</style>

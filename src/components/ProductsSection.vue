@@ -2,7 +2,8 @@
 
 <template>
 	<div
-		class="d-flex justify-center flex-row mb-6">
+		class="d-flex justify-center flex-row"
+		id="products">
 		<v-sheet
 			class="section-height left-left w-50">
 			<img
@@ -31,7 +32,7 @@
 		</v-sheet>
 	</div>
 </template>
-<style>
+<style scoped>
 .section-height {
 	height: 40rem;
 	background-color: #9b9484;

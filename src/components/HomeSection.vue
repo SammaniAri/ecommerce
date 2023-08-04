@@ -1,7 +1,9 @@
 <!-- @format -->
 
 <template>
-	<div class="home">
+	<div
+		class="home"
+		id="home">
 		<div class="text-container">
 			<div class="text-h1 pa-15">
 				Make milestones memorable</div
@@ -35,7 +37,6 @@
 }
 .image-container {
 	background-color: #ece6d6;
-
 	flex: 50%;
 	height: 40rem;
 }
