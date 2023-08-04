@@ -3,7 +3,7 @@
 <template>
 	<v-container>
 		<v-app-bar :elevation="8">
-			<v-app-bar-nav-icon
+			<v-app-bar-nav-icon class="pl-15"
 				><v-icon icon="mdi:mdi-menu"
 			/></v-app-bar-nav-icon>
 			<v-app-bar-title>
@@ -22,7 +22,9 @@
 			<v-btn variant="plain">
 				Feedback
 			</v-btn>
-			<v-btn variant="plain">
+			<v-btn
+				variant="plain"
+				class="pr-15">
 				Get in Touch
 			</v-btn>
 		</v-app-bar>
