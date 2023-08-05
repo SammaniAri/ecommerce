@@ -9,7 +9,7 @@
 			<img
 				class="image1 pl-15"
 				v-bind:src="
-					require('../assets/2.svg')
+					require('../assets/3.svg')
 				" />
 		</v-sheet>
 		<v-sheet

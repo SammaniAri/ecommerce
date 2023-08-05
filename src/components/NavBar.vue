@@ -14,14 +14,12 @@
 				<a href="#home">Home</a>
 			</v-btn>
 			<v-btn variant="plain">
-				About
+				<a href="#about">About</a>
 			</v-btn>
 			<v-btn variant="plain">
 				<a href="#products">Products</a>
 			</v-btn>
-			<v-btn variant="plain">
-				Feedback
-			</v-btn>
+
 			<v-btn
 				variant="plain"
 				class="pr-15">
