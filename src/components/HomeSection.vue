@@ -1,54 +1,39 @@
 <!-- @format -->
 
 <template>
-	<div
-		class="home"
-		id="home">
-		<div class="text-container">
-			<div class="text-h1 pa-15">
-				Make milestones memorable</div
-			>
-			<div class="text-h4 pa-15"
-				>Celebrate with handmade custom
-				jewelry
-			</div>
-		</div>
-		<div class="image-container">
-			<img
-				class="image1"
-				v-bind:src="
-					require('../assets/1.svg')
-				" />
-		</div>
-	</div>
+	<v-container class="container">
+		<v-row
+			no-gutters
+			class="d-flex align-center">
+			<v-col
+				cols="12"
+				md="6">
+				<v-img
+					class="ml-16"
+					:max-width="640"
+					aspect-ratio="1/1"
+					cover
+					src="../assets/1.svg"></v-img>
+			</v-col>
+			<v-col
+				cols="12"
+				md="6">
+				<div
+					class="text-h2 pa-12 d-flex justify-center">
+					Make milestones memorable</div
+				>
+				<div
+					class="text-h4 px-12 py-6 d-flex justify-center"
+					>Celebrate with handmade
+					custom jewelry
+				</div>
+			</v-col>
+		</v-row>
+	</v-container>
 </template>
-<script></script>
-<style>
-.home {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.text-container {
-	background-color: #9b9484;
-	flex: 50%;
-	height: 40rem;
-}
-.image-container {
+<style scoped>
+.container {
+	max-width: 2000px;
 	background-color: #ece6d6;
-	flex: 50%;
-	height: 40rem;
-}
-.image1 {
-	display: flex;
-	height: 40rem;
-}
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-	.flex-container,
-	.image-container {
-		flex: 100%;
-	}
 }
 </style>

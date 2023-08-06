@@ -7,7 +7,7 @@
 				cols="12"
 				md="6">
 				<v-img
-					class="d-none d-sm-flex"
+					class="d-none d-sm-flex ml-16"
 					:max-width="640"
 					aspect-ratio="1/1"
 					cover
