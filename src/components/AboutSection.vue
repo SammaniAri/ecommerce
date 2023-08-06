@@ -48,6 +48,5 @@
 .container {
 	background-color: #ece6d6;
 	max-width: 2000px;
-	height: 40rem;
 }
 </style>
