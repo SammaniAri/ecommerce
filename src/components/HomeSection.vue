@@ -1,7 +1,9 @@
 <!-- @format -->
 
 <template>
-	<v-container class="container">
+	<v-container
+		class="container"
+		id="home">
 		<v-row
 			no-gutters
 			class="d-flex align-center">

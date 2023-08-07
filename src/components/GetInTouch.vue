@@ -1,6 +1,8 @@
 <!-- @format -->
 <template>
-	<v-container class="container">
+	<v-container
+		class="container"
+		id="contact">
 		<p
 			class="text-h5 py-1 d-flex pl-15 pt-10">
 			STUDIO MOONE</p

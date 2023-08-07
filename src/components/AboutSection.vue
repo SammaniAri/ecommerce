@@ -1,7 +1,9 @@
 <!-- @format -->
 
 <template>
-	<v-container class="container">
+	<v-container
+		class="container"
+		id="about">
 		<v-row no-gutters>
 			<v-col
 				cols="12"

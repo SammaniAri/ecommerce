@@ -1,7 +1,9 @@
 <!-- @format -->
 
 <template>
-	<v-container class="container">
+	<v-container
+		class="container"
+		id="products">
 		<v-row class="d-flex align-center">
 			<v-col
 				cols="12"
