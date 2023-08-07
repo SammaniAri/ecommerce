@@ -34,39 +34,48 @@
 			v-model="drawer"
 			app
 			class="red">
-			<v-card
-				class="mx-auto"
-				max-width="300">
-				<v-list density="compact">
-					<v-list-item variant="tonal"
-						><a href="#home"
-							>Home</a
-						></v-list-item
-					>
-					<v-list-item variant="tonal"
-						><a href="#about"
-							>About</a
-						></v-list-item
-					>
-					<v-list-item variant="tonal"
-						><a href="#products"
-							>Products</a
-						></v-list-item
-					>
-					<v-list-item variant="tonal"
-						><a href="#contact"
-							>Contact</a
-						></v-list-item
-					>
-				</v-list>
-			</v-card></v-navigation-drawer
-		>
+			<v-hover>
+				<v-card
+					class="mx-auto"
+					max-width="300">
+					<v-list>
+						<v-list-item
+							class="item"
+							v-for="i in items"
+							:key="i.title">
+							<a
+								:href="'#' + i.value"
+								>{{ i.title }}</a
+							>
+						</v-list-item>
+					</v-list>
+				</v-card>
+			</v-hover>
+		</v-navigation-drawer>
 	</v-container>
 </template>
 <script>
 export default {
 	data: () => ({
 		drawer: false,
+		items: [
+			{
+				title: "Home",
+				value: "home",
+			},
+			{
+				title: "About",
+				value: "about",
+			},
+			{
+				title: "Products",
+				value: "products",
+			},
+			{
+				title: "Contact",
+				value: "contact",
+			},
+		],
 	}),
 };
 </script>
@@ -74,5 +83,8 @@ export default {
 a {
 	text-decoration: none;
 	color: black;
+}
+.item:hover {
+	background-color: #ece6d6;
 }
 </style>
