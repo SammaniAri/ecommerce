@@ -4,10 +4,25 @@
 	<div
 		class="productview"
 		id="productview">
-		<h1
-			>This is the jewellry-collection
-			page!
-		</h1>
+		<v-toolbar
+			:elevation="8"
+			title=" MOONE STUDIO">
+			<v-btn icon>
+				<v-icon
+					class="mdi mdi-heart-outline"></v-icon>
+			</v-btn>
+			<v-btn icon>
+				<v-icon
+					class="mdi mdi-cart-outline"></v-icon>
+			</v-btn>
+			<v-btn icon>
+				<v-icon
+					class="mdi mdi-account-outline"></v-icon>
+			</v-btn>
+		</v-toolbar>
+		<div class="text-h3"
+			>STUDIO MOONE
+		</div>
 		<v-container class="d-flex">
 			<v-row>
 				<v-col
