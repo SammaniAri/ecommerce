@@ -6,7 +6,7 @@
 		id="productview">
 		<v-toolbar
 			:elevation="8"
-			title=" MOONE STUDIO">
+			title="MOONE STUDIO">
 			<v-btn icon>
 				<v-icon
 					class="mdi mdi-heart-outline"></v-icon>
@@ -20,9 +20,7 @@
 					class="mdi mdi-account-outline"></v-icon>
 			</v-btn>
 		</v-toolbar>
-		<div class="text-h3"
-			>STUDIO MOONE
-		</div>
+
 		<v-container class="d-flex">
 			<v-row>
 				<v-col
