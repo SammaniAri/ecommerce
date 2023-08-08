@@ -18,31 +18,29 @@
 						class="mx-auto my-2"
 						max-width="344"
 						variant="outlined">
-						<v-card-item>
-							<div>
-								<div
-									class="text-overline mb-1">
-									New
-								</div>
-
-								<v-img
-									class="ml-16"
-									:max-width="200"
-									aspect-ratio="1/1"
-									cover
-									:src="
-										getImgUrl(
-											item.picture
-										)
-									"></v-img>
-								<div
-									class="text-caption">
-									{{ item.description }}
-								</div>
+						<v-card-item
+							class="d-flex justify-center">
+							<div
+								class="text-overline mb-1">
+								New
+							</div>
+							<v-img
+								class="image"
+								:max-width="200"
+								aspect-ratio="1/1"
+								cover
+								:src="
+									getImgUrl(
+										item.picture
+									)
+								"></v-img>
+							<div class="text-caption">
+								{{ item.description }}
 							</div>
 						</v-card-item>
 
-						<v-card-actions>
+						<v-card-actions
+							class="d-flex justify-center">
 							<v-btn variant="outlined">
 								<v-btn>{{
 									item.price
@@ -97,6 +95,7 @@ export default {
 					id: 5,
 					price: "200$",
 					picture: "j5.svg",
+					hover: false,
 				},
 				{
 					description:
@@ -111,6 +110,7 @@ export default {
 					id: 7,
 					price: "300$",
 					picture: "j7.svg",
+					hover: false,
 				},
 				{
 					description:
@@ -130,3 +130,9 @@ export default {
 	},
 };
 </script>
+<style scoped>
+.image {
+	width: 200px;
+	height: 200px;
+}
+</style>
