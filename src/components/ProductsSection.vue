@@ -30,7 +30,9 @@
 				<div
 					class="py-1 d-flex justify-center">
 					<v-btn variant="outlined"
-						>Shop Now</v-btn
+						><a href="/productview"
+							>Products</a
+						></v-btn
 					>
 				</div>
 			</v-col>
