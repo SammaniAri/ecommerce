@@ -6,6 +6,7 @@ import {
 } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ProductView from "../views/ProductView.vue";
+import ShoppingCartView from "../views/ShoppingCartView.vue";
 
 const routes = [
 	{
@@ -25,6 +26,11 @@ const routes = [
 			import(
 				 webpackChunkName: "about" "../views/ProductView.vue"
 			),*/
+	},
+	{
+		path: "/shoppingcartview",
+		name: "shoppingcartview",
+		component: ShoppingCartView,
 	},
 ];
 

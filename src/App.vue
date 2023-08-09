@@ -9,6 +9,9 @@
 		<router-link to="/productview"
 			>Products</router-link
 		>
+		<router-link to="/shoppingcartview"
+			>Shopping Cart</router-link
+		>
 	</nav>
 	<router-view />
 </template>
