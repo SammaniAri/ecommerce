@@ -65,10 +65,8 @@
 								@click="
 									addItemToCart(item)
 								">
-								<v-btn>{{
-									item.price
-								}}</v-btn
-								>Add to Cart
+								{{ item.price }} Add to
+								Cart
 							</v-btn>
 						</v-card-actions>
 					</v-card>
@@ -79,11 +77,12 @@
 </template>
 
 <script>
+import { store } from "../store.js";
 // @ is an alias to /src
 export default {
 	data() {
 		return {
-			cart: [],
+			cart: store.cart,
 			items: [
 				{
 					description:
@@ -153,7 +152,7 @@ export default {
 		},
 		addItemToCart(item) {
 			this.cart.push(item);
-			//console.log(this.cart);
+			console.log(this.cart);
 		},
 	},
 };
