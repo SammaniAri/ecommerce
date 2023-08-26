@@ -1,7 +1,17 @@
 /** @format */
 
-import { reactive } from "vue";
+import { createStore } from "vuex";
 
-export const store = reactive({
-	cart: [],
+const store = createStore({
+	state: {
+		cart: [],
+	},
+	mutations: {
+		addItem(state, item) {
+			state.cart.push(item);
+			console.log(state);
+		},
+	},
 });
+
+export default store;

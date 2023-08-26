@@ -12,13 +12,16 @@
 					class="mdi mdi-heart-outline"></v-icon>
 			</v-btn>
 
-			<v-btn icon
-				><a href="/shoppingcartview"
-					><v-icon
+			<v-btn icon>
+				<router-link
+					to="/shoppingcartview">
+					<v-icon
 						class="mdi mdi-cart-outline">
 					</v-icon>
-					({{ cart.length }})</a
-				>
+					({{
+						$store.state.cart.length
+					}})
+				</router-link>
 			</v-btn>
 
 			<v-btn icon>
@@ -77,12 +80,10 @@
 </template>
 
 <script>
-import { store } from "../store.js";
 // @ is an alias to /src
 export default {
 	data() {
 		return {
-			cart: store.cart,
 			items: [
 				{
 					description:
@@ -151,8 +152,12 @@ export default {
 				pic);
 		},
 		addItemToCart(item) {
-			this.cart.push(item);
-			console.log(this.cart);
+			//this.cart.push(item);
+			this.$store.commit(
+				"addItem",
+				item
+			);
+			//console.log(store.cart);
 		},
 	},
 };

@@ -1,6 +1,7 @@
 <!-- @format -->
 
 <template>
+	{{ count }}
 	<v-container>
 		<v-row>
 			<v-card
@@ -9,7 +10,9 @@
 				<v-container>
 					<v-row dense>
 						<v-col cols="12">
-							<v-card>
+							<v-card
+								v-for="item in items"
+								:key="item.id">
 								<div
 									class="d-flex flex-no-wrap justify-space-between">
 									<v-avatar
@@ -26,17 +29,12 @@
 										</v-card-title>
 
 										<v-card-subtitle>
-											220
-											$</v-card-subtitle
+											{{
+												item.price
+											}}</v-card-subtitle
 										>
 
 										<v-card-actions>
-											<!-- <v-btn
-										class="ms-2"
-										variant="outlined"
-										size="small">
-										START RADIO
-									</v-btn> -->
 											<v-select
 												h-25
 												label="Select"
@@ -92,3 +90,17 @@
 		</v-row>
 	</v-container>
 </template>
+<script>
+export default {
+	data() {
+		return { items: [] };
+	},
+	computed: {
+		count() {
+			console.log(this.$store.state);
+			return this.$store.state.cart;
+		},
+	},
+};
+//console.log(store.cart);
+</script>
