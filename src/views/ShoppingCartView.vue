@@ -1,7 +1,6 @@
 <!-- @format -->
 
 <template>
-	{{ count }}
 	<v-container>
 		<v-row>
 			<v-card
@@ -11,7 +10,7 @@
 					<v-row dense>
 						<v-col cols="12">
 							<v-card
-								v-for="item in items"
+								v-for="item in cart"
 								:key="item.id">
 								<div
 									class="d-flex flex-no-wrap justify-space-between">
@@ -20,12 +19,18 @@
 										size="125"
 										rounded="0">
 										<v-img
-											src="../assets/2.svg"></v-img>
+											:src="
+												getImgUrl(
+													item.picture
+												)
+											"></v-img>
 									</v-avatar>
 									<div>
 										<v-card-title
 											class="text-h5">
-											Product Name
+											{{
+												item.description
+											}}
 										</v-card-title>
 
 										<v-card-subtitle>
@@ -42,11 +47,15 @@
 													'1',
 													'2',
 													'3',
-													'4',
-													'5',
 												]"
 												variant="outlined"></v-select>
-											<v-btn icon>
+											<v-btn
+												icon
+												@click="
+													removeItemFromCart(
+														item
+													)
+												">
 												<v-icon
 													class="mdi mdi-trash-can-outline"></v-icon>
 											</v-btn>
@@ -60,13 +69,14 @@
 			</v-card>
 			<v-card
 				class="to-checkout mx-auto"
-				max-width="400"
+				width="400"
+				max-height="400"
 				variant="outlined">
 				<v-card-item>
 					<div>
 						<div
 							class="text-overline mb-1">
-							Order Summery
+							Order Summry
 						</div>
 
 						<div class="text-caption">
@@ -96,11 +106,22 @@ export default {
 		return { items: [] };
 	},
 	computed: {
-		count() {
+		cart() {
 			console.log(this.$store.state);
 			return this.$store.state.cart;
 		},
 	},
+	methods: {
+		getImgUrl: function (cart) {
+			return require("../assets/" +
+				cart);
+		},
+		removeItemFromCart(item) {
+			this.$store.commit(
+				"deleteItem",
+				item
+			);
+		},
+	},
 };
-//console.log(store.cart);
 </script>
