@@ -4,27 +4,34 @@
 	<v-container>
 		<v-app-bar :elevation="8">
 			<v-app-bar-nav-icon
-				class="pl-15"
+				class="pl-15 d-lg-none d-xl-none"
 				@click="drawer = !drawer"
 				><v-icon icon="mdi:mdi-menu"
 			/></v-app-bar-nav-icon>
+
 			<v-app-bar-title>
 				STUDIO MOONE</v-app-bar-title
 			>
 
-			<v-btn variant="plain">
+			<v-btn
+				variant="plain"
+				class="d-none d-lg-block">
 				<a href="#home">Home</a>
 			</v-btn>
-			<v-btn variant="plain">
+			<v-btn
+				variant="plain"
+				class="d-none d-lg-block">
 				<a href="#about">About</a>
 			</v-btn>
-			<v-btn variant="plain">
+			<v-btn
+				variant="plain"
+				class="d-none d-lg-block">
 				<a href="#products">Products</a>
 			</v-btn>
 
 			<v-btn
 				variant="plain"
-				class="pr-15">
+				class="pr-15 d-none d-lg-block">
 				<a href="#contact"
 					>Get In Touch</a
 				>
@@ -36,7 +43,7 @@
 			class="red">
 			<v-hover>
 				<v-card
-					class="mx-auto"
+					class="mx-auto d-lg-none d-xl-none"
 					max-width="300">
 					<v-list>
 						<v-list-item

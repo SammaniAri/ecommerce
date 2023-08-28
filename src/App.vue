@@ -9,9 +9,13 @@
 		<router-link to="/productview"
 			>Products</router-link
 		>
+		<router-link to="/shoppingcartview"
+			>Shopping Cart</router-link
+		>
 	</nav>
 	<router-view />
 </template>
+<script></script>
 
 <style>
 #app {
@@ -27,12 +31,15 @@
 nav {
 	padding: 30px;
 	display: flex;
+	justify-content: center;
 }
 
 nav a {
 	font-weight: bold;
 	color: #232320;
 	font-size: x-large;
+	padding: 5px;
+	font-size: large;
 }
 
 nav a.router-link-exact-active {

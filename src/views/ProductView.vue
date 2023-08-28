@@ -11,10 +11,19 @@
 				<v-icon
 					class="mdi mdi-heart-outline"></v-icon>
 			</v-btn>
+
 			<v-btn icon>
-				<v-icon
-					class="mdi mdi-cart-outline"></v-icon>
+				<router-link
+					to="/shoppingcartview">
+					<v-icon
+						class="mdi mdi-cart-outline">
+					</v-icon>
+					({{
+						$store.state.cart.length
+					}})
+				</router-link>
 			</v-btn>
+
 			<v-btn icon>
 				<v-icon
 					class="mdi mdi-account-outline"></v-icon>
@@ -54,11 +63,13 @@
 
 						<v-card-actions
 							class="d-flex justify-center">
-							<v-btn variant="outlined">
-								<v-btn>{{
-									item.price
-								}}</v-btn
-								>Add to Cart
+							<v-btn
+								variant="outlined"
+								@click="
+									addItemToCart(item)
+								">
+								{{ item.price }} Add to
+								Cart
 							</v-btn>
 						</v-card-actions>
 					</v-card>
@@ -139,6 +150,14 @@ export default {
 		getImgUrl: function (pic) {
 			return require("../assets/" +
 				pic);
+		},
+		addItemToCart(item) {
+			//this.cart.push(item);
+			this.$store.commit(
+				"addItem",
+				item
+			);
+			//console.log(store.cart);
 		},
 	},
 };
