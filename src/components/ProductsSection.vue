@@ -18,7 +18,8 @@
 			<v-col
 				cols="12"
 				md="6"
-				><p
+				v-motion-slide-visible-bottom>
+				<p
 					class="text-h4 py-1 d-flex justify-center"
 					>From me to me</p
 				>

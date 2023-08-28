@@ -3,11 +3,15 @@
 	<v-container
 		class="container"
 		id="contact">
-		<p
-			class="text-h5 py-1 d-flex pl-15 pt-10">
-			STUDIO MOONE</p
-		>
-		<v-row no-gutters>
+		<div v-motion-slide-visible-top>
+			<p
+				class="text-h5 py-1 d-flex pl-15 pt-10">
+				STUDIO MOONE</p
+			>
+		</div>
+		<v-row
+			no-gutters
+			v-motion-slide-visible-bottom>
 			<v-col
 				cols="12"
 				sm="6"

@@ -7,7 +7,8 @@
 		<v-row no-gutters>
 			<v-col
 				cols="12"
-				md="6">
+				md="6"
+				v-motion-slide-visible-bottom>
 				<p
 					class="text-h3 py-1 my-6 mx-15"
 					>Our Story
