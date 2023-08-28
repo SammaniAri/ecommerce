@@ -20,31 +20,21 @@
 			<v-col
 				cols="12"
 				md="6"
-				v-motion-slide-visible-bottom>
-				<div>
-					<div
-						class="text-h2 pa-12 d-flex justify-center">
-						Make milestones
-						memorable</div
-					>
-					<div
-						class="text-h4 px-12 py-6 d-flex justify-center"
-						>Celebrate with handmade
-						custom jewelry
-					</div>
+				v-motion-slide-visible-top>
+				<div
+					class="text-h2 pa-12 d-flex justify-center">
+					Make milestones memorable</div
+				>
+				<div
+					class="text-h4 px-12 py-6 d-flex justify-center"
+					>Celebrate with handmade
+					custom jewelry
 				</div>
 			</v-col>
 		</v-row>
 	</v-container>
 </template>
-<script>
-/*import { directive as motion } from "@vueuse/motion";
-export default {
-	directives: {
-		motion: motion(),
-	},
-};*/
-</script>
+<script></script>
 <style scoped>
 .container {
 	max-width: 2000px;
