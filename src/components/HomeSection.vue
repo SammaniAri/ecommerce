@@ -20,7 +20,7 @@
 			<v-col
 				cols="12"
 				md="6"
-				v-motion-slide-visible-top>
+				v-motion-slide-top>
 				<div
 					class="text-h2 pa-12 d-flex justify-center">
 					Make milestones memorable</div

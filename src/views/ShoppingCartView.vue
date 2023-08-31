@@ -80,12 +80,25 @@
 						</div>
 
 						<div class="text-caption">
-							Subtotal 700 $</div
+							Subtotal
+							{{
+								calculateSubTotalPrice
+							}}
+							$</div
 						>
 						<div class="text-caption">
-							Estimated Tax 50 $</div
+							Estimated Tax
+							{{
+								calculateEstimatedTax
+							}}
+							$</div
 						><div class="text-h6 mb-1">
-							Total 750 $
+							Total
+							{{
+								calculateSubTotalPrice +
+								calculateEstimatedTax
+							}}
+							$
 						</div>
 					</div>
 				</v-card-item>
@@ -109,6 +122,24 @@ export default {
 		cart() {
 			console.log(this.$store.state);
 			return this.$store.state.cart;
+		},
+		calculateSubTotalPrice() {
+			return this.cart.reduce(
+				(total, item) => {
+					// Remove the dollar sign ($) and convert the price to a number
+					const price = parseFloat(
+						item.price
+					);
+					return total + price;
+				},
+				0
+			);
+		},
+		calculateEstimatedTax() {
+			return (
+				this.calculateSubTotalPrice *
+				0.05
+			);
 		},
 	},
 	methods: {
