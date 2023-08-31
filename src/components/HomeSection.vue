@@ -19,7 +19,8 @@
 			</v-col>
 			<v-col
 				cols="12"
-				md="6">
+				md="6"
+				v-motion-slide-top>
 				<div
 					class="text-h2 pa-12 d-flex justify-center">
 					Make milestones memorable</div
@@ -33,6 +34,7 @@
 		</v-row>
 	</v-container>
 </template>
+<script></script>
 <style scoped>
 .container {
 	max-width: 2000px;
