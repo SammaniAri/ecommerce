@@ -89,35 +89,35 @@ export default {
 					description:
 						" description one",
 					id: 1,
-					price: "140",
+					price: 140,
 					picture: "j1.svg",
 				},
 				{
 					description:
 						"description two",
 					id: 2,
-					price: "180",
+					price: 180,
 					picture: "j2.svg",
 				},
 				{
 					description:
 						"description three",
 					id: 3,
-					price: "120",
+					price: 120,
 					picture: "j3.svg",
 				},
 				{
 					description:
 						"description four",
 					id: 4,
-					price: "100",
+					price: 100,
 					picture: "j4.svg",
 				},
 				{
 					description:
 						"description five",
 					id: 5,
-					price: "200",
+					price: 200,
 					picture: "j5.svg",
 					hover: false,
 				},
@@ -125,14 +125,14 @@ export default {
 					description:
 						"description six",
 					id: 6,
-					price: "120",
+					price: 120,
 					picture: "j6.svg",
 				},
 				{
 					description:
 						"description seven",
 					id: 7,
-					price: "300",
+					price: 300,
 					picture: "j7.svg",
 					hover: false,
 				},
@@ -140,7 +140,7 @@ export default {
 					description:
 						"description eight",
 					id: 8,
-					price: "220",
+					price: 220,
 					picture: "j8.svg",
 				},
 			],
