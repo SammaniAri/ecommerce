@@ -41,12 +41,19 @@
 
 										<v-card-actions>
 											<v-select
+												v-model="
+													item.numberOfItems
+												"
+												@update:modelValue="
+													changeValue(
+														numberOfItems,
+														2
+													)
+												"
 												h-25
 												label="Select"
 												:items="[
-													'1',
-													'2',
-													'3',
+													1, 2, 3,
 												]"
 												variant="outlined"></v-select>
 											<v-btn
@@ -124,16 +131,13 @@ export default {
 			return this.$store.state.cart;
 		},
 		calculateSubTotalPrice() {
-			return this.cart.reduce(
-				(total, item) => {
-					// Remove the dollar sign ($) and convert the price to a number
-					const price = parseFloat(
-						item.price
-					);
-					return total + price;
-				},
-				0
-			);
+			let total = 0;
+			this.cart.forEach((item) => {
+				total +=
+					item.price *
+					item.numberOfItems;
+			});
+			return total;
 		},
 		calculateEstimatedTax() {
 			return (
@@ -152,6 +156,11 @@ export default {
 				"deleteItem",
 				item
 			);
+		},
+		changeValue(numberOfItems, item) {
+			console.log(this.$store.state);
+
+			return numberOfItems * item.price;
 		},
 	},
 };
